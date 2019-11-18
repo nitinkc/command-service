@@ -18,11 +18,28 @@ public class CurrencyExchangeController {
     @Autowired
     private Environment environment;
 
+    @Autowired
+    private ExchangeValueRepository exchangeValueRepository;
+
     @GetMapping("/foreign-exchange/from/{from}/to/{to}")
     public ExchangeValue retrieveExchangeValue(@PathVariable String from, @PathVariable String to){
-        ExchangeValue exchangeValue = new ExchangeValue(1000L, from, to, BigDecimal.valueOf(65));
+        //Caclling from H2 Database
+        ExchangeValue exchangeValue = exchangeValueRepository.findByFromAndTo(from,to);
         exchangeValue.setPort(Integer.parseInt(environment.getProperty("local.server.port")));
+
         return exchangeValue;
 
+    }
+
+
+    @GetMapping("/foreign-exchange")
+    public String showGeneralMessage(){
+
+        String msg = "Use the system to retrive the exchange like \n"+
+                "http://localhost:8000/foreign-exchange/from/USD/to/INR"+"\nOR\n"+
+                "http://localhost:8000/foreign-exchange/from/EUR/to/INR"+"\nOR\n"+
+                "http://localhost:8000/foreign-exchange/from/AUD/to/INR"+"\n";
+
+        return msg;
     }
 }

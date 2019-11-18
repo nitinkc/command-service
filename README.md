@@ -9,6 +9,12 @@
 * jpa
 * H2 Db
 
+
+#### JDBC URL
+http://localhost:8000/h2-console
+
+JDBC URL: jdbc:h2:mem:testdb
+
 # Running multiple instances
 
 Goto Run -> Edit Configurations and duplicate the spring boot profile
