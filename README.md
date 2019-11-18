@@ -1,6 +1,15 @@
 # currency-exchange
 
-Running multiple instances
+### From Spring initializer
+
+* Web
+* Actuator
+* dev tools
+* config client
+* jpa
+* H2 Db
+
+# Running multiple instances
 
 Goto Run -> Edit Configurations and duplicate the spring boot profile
 
