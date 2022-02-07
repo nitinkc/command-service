@@ -1,6 +1,7 @@
-package com.nitin.microservices.learning.foreignExchangeService.currencyexchangeservice;
+package com.nitin.microservices.command.foreignExchangeService;
 
 import lombok.Data;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.Column;
@@ -13,6 +14,7 @@ import java.math.BigDecimal;
  */
 @Data
 @Entity
+@Component
 public class ExchangeValue {
 
     @Id

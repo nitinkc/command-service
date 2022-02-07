@@ -4,9 +4,9 @@ plugins {
     id 'java'
 }
 
-group = 'com.nitin.microservices.learning.foreignExchangeService'
+group = 'com.nitin.microservices.command.foreignExchangeService'
 version = '0.0.1-SNAPSHOT'
-description = 'currency-exchange-service'
+description = 'command-service'
 sourceCompatibility = '11'
 
 configurations {

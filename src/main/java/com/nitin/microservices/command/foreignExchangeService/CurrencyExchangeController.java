@@ -1,4 +1,4 @@
-package com.nitin.microservices.learning.foreignExchangeService.currencyexchangeservice;
+package com.nitin.microservices.command.foreignExchangeService;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,8 +7,6 @@ import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.math.BigDecimal;
 
 /**
  * Created by nitin on Sunday, November/17/2019 at 7:57 PM
@@ -45,5 +43,10 @@ public class CurrencyExchangeController {
                 "http://localhost:8000/foreign-exchange/from/AUD/to/INR"+"\n";
 
         return msg;
+    }
+
+    @GetMapping("/")
+    public String welcomeMessage(){
+        return "welcome to command service";
     }
 }

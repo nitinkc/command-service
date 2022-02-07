@@ -1,4 +1,4 @@
-package com.nitin.microservices.learning.foreignExchangeService.currencyexchangeservice;
+package com.nitin.microservices.command.foreignExchangeService;
 
 import brave.sampler.Sampler;
 import org.springframework.boot.SpringApplication;
@@ -6,12 +6,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 
-@SpringBootApplication
 @EnableDiscoveryClient
-public class CurrencyExchangeServiceApplication {
+@SpringBootApplication
+public class CommandApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CurrencyExchangeServiceApplication.class, args);
+		SpringApplication.run(CommandApplication.class, args);
 	}
 
 	@Bean

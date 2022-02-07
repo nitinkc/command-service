@@ -1,13 +1,8 @@
-package com.nitin.microservices.learning.foreignExchangeService.currencyexchangeservice;
+package com.nitin.microservices.command.foreignExchangeService;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class CurrencyExchangeServiceApplicationTests {
-
-	@Test
-	void contextLoads() {
-	}
-
 }
