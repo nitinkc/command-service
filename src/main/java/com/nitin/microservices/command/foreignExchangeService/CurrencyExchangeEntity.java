@@ -12,9 +12,9 @@ import java.math.BigDecimal;
  * Created by nitin on Sunday, November/17/2019 at 8:00 PM
  */
 @Data
-@Entity
+@Entity(name = "currency_exchange")
 @Component
-public class ExchangeValue {
+public class CurrencyExchangeEntity {
 
     @Id
     private Long id;

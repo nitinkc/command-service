@@ -26,23 +26,29 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-amqp'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.cloud:spring-cloud-sleuth-zipkin'
     implementation 'org.springframework.cloud:spring-cloud-starter-config'
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
-    implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
+
+    // https://mvnrepository.com/artifact/io.micrometer/micrometer-tracing-bridge-brave
+    implementation 'io.micrometer:micrometer-tracing-bridge-brave:1.1.6'
+// https://mvnrepository.com/artifact/io.zipkin.reporter2/zipkin-reporter-brave
+    implementation 'io.zipkin.reporter2:zipkin-reporter-brave:2.16.4'
+
+    // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-zipkin
+    implementation 'org.springframework.cloud:spring-cloud-starter-zipkin:2.2.8.RELEASE'
+
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.amqp:spring-rabbit-test'
-// https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-zuul
+    // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-zuul
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-zuul:2.2.10.RELEASE'
-// https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-zipkin
-    implementation 'org.springframework.cloud:spring-cloud-starter-zipkin:2.2.8.RELEASE'
+
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     runtimeOnly 'com.h2database:h2'
-//    implementation group: 'org.springframework.amqp', name: 'spring-rabbit', version: '2.2.19.RELEASE'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 dependencyManagement {
